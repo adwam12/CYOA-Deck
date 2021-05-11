@@ -78,4 +78,24 @@ public class EquipmentScript : MonoBehaviour
 
 
     }
+    public void clearAll()
+    {
+      if (head){
+        PlayerStats.transform.GetComponent<PlayerStats>().MaxHealth -= head.MaxHealthBonus;
+        PlayerStats.transform.GetComponent<PlayerStats>().MaxStamina -= head.MaxStaminaBonus;
+        head = null; 
+      }
+      if (chest){
+        PlayerStats.transform.GetComponent<PlayerStats>().MaxHealth -= chest.MaxHealthBonus;
+        PlayerStats.transform.GetComponent<PlayerStats>().MaxStamina -= chest.MaxStaminaBonus;
+        chest = null; 
+      }
+      if (accessory){
+        accessory = null; 
+      }
+      if (weapon){
+      PlayerStats.transform.GetComponent<PlayerStats>().Attack = 0;
+      weapon = null; 
+      }
+    }
 }

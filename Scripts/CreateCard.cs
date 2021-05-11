@@ -60,15 +60,6 @@ public class CreateCard : MonoBehaviour
     points = new Vector3[lengthOfLineRenderer];
 
     // createNewCard("Type of Card Here");
-
-    // newCard.text = newCard.getCardText();
-    // Text mainText = newCardTitle.GetComponent(a.transform.Find("CardText"));
-    // newCard.text = newCard.getCardText();
-    // Text litText = newCardTitle.GetComponent("Text");
-    // Debug.Log();
-    // Debug.Log(newCard.getCardText());
-    // objToSpawn1.AddComponent<Image>();
-
   }
   // Card card;
 
@@ -89,20 +80,15 @@ public class CreateCard : MonoBehaviour
     Text newCardTitle = a.transform.GetChild(0).GetComponent<Text>();
     Text firstOption = a.transform.GetChild(3).GetChild(0).GetComponent<Text>();
     Image itemImage = a.transform.GetChild(2).GetComponent<Image>();
-    // newItemCard.image.color = itemImage;
-    // Debug.Log();
-
 
     newCardText.text = newItemCard.getItemDesc();
     newCardTitle.text = newItemCard.name;
     firstOption.text = newItemCard.getOption1();
     itemImage.sprite = newItemCard.getSprite();
     newCardScrollValue.value = 1;
-    // Debug.Log(itemImage);
 
 
     Button topButton = a.transform.GetChild(3).GetComponent<Button>();
-    // topButton.onClick.AddListener(mainGame.makeNewCard);
     topButton.onClick.AddListener(() =>
     {
 
@@ -110,17 +96,11 @@ public class CreateCard : MonoBehaviour
       Destroy(a);
     });
 
-    // a.onClick.AddListener(()=>{
-    //   destroy(a);
-    // });
-
     return a;
 
   }
   public static void SetRight(RectTransform rt, float right)
   {
-
-    // RectTransform rt = InvParent.transform.GetComponent<RectTransform>();
     // rt.offsetMax = new Vector2(-right, rt.offsetMax.y);
     rt.sizeDelta = new Vector2(rt.sizeDelta.x + 243, rt.sizeDelta.y);
 
@@ -128,8 +108,6 @@ public class CreateCard : MonoBehaviour
   public GameObject button;
   public void addToInventory(GameObject itemCard, bool isUsable, ItemCard itemToUse)
   {
-    // var lastChild = InvParent.transform.GetChild(InvParent.transform.childCount - 1);
-    // Debug.Log(InvParent.GetComponent<RectTransform>());
     SetRight(InvParent.transform.GetComponent<RectTransform>(), 1050);
     GameObject newInvItem = Instantiate(InvCardTemplate);
     newInvItem.name = itemToUse.name;
@@ -140,20 +118,21 @@ public class CreateCard : MonoBehaviour
     newInvItem.transform.GetChild(1).GetComponent<Text>().text = itemCard.transform.GetChild(1).GetChild(0).GetChild(1).GetComponent<Text>().text;
     newInvItem.transform.GetChild(2).GetComponent<Image>().sprite = itemCard.transform.GetChild(2).GetComponent<Image>().sprite;
     Button useItemButton = newInvItem.transform.GetChild(3).GetComponent<Button>();
-    // Destroy(newInvItem.transform.GetChild(3));
 
-
-    if (isUsable)
+    if (!isUsable)
+    {
+      useItemButton.gameObject.SetActive(false);
+    }
+    else
     {
       //! LOGIC FOR HEALTH INCREASE
       newInvItem.transform.GetChild(3).GetChild(0).GetComponent<Text>().text = itemToUse.getOption1();
-      // GameObject newButton = Instantiate(button) as GameObject;
       if (itemToUse.healthUp)
       {
         Debug.Log("INCREASE HEALTH BY: " + itemToUse.IncreaseHealthBy);
         useItemButton.onClick.AddListener(() =>
         {
-          Debug.Log("BONUS: " + PlayerStats.transform.GetComponent<PlayerStats>().Health);
+          // Debug.Log("BONUS: " + PlayerStats.transform.GetComponent<PlayerStats>().Health);
           PlayerStats.transform.GetComponent<PlayerStats>().Health = PlayerStats.transform.GetComponent<PlayerStats>().Health + itemToUse.IncreaseHealthBy;
           Destroy(newInvItem);
         });
@@ -165,7 +144,6 @@ public class CreateCard : MonoBehaviour
         Debug.Log("INCREASE MAX HEALTH BY: " + itemToUse.IncreaseMaxHealthBy);
         useItemButton.onClick.AddListener(() =>
         {
-
           PlayerStats.transform.GetComponent<PlayerStats>().MaxHealth = PlayerStats.transform.GetComponent<PlayerStats>().MaxHealth + itemToUse.IncreaseMaxHealthBy;
           Destroy(newInvItem);
         });
@@ -177,7 +155,7 @@ public class CreateCard : MonoBehaviour
         Debug.Log("INCREASE Stamina BY: " + itemToUse.IncreaseStaminaBy);
         useItemButton.onClick.AddListener(() =>
         {
-          Debug.Log("BONUS: " + PlayerStats.transform.GetComponent<PlayerStats>().Stamina);
+          // Debug.Log("BONUS: " + PlayerStats.transform.GetComponent<PlayerStats>().Stamina);
           PlayerStats.transform.GetComponent<PlayerStats>().Stamina = PlayerStats.transform.GetComponent<PlayerStats>().Stamina + itemToUse.IncreaseStaminaBy;
           Destroy(newInvItem);
         }
@@ -195,11 +173,6 @@ public class CreateCard : MonoBehaviour
 
       }
 
-
-    }
-    else
-    {
-      useItemButton.gameObject.SetActive(false);
     }
   }
   public void ApplyDamage(float damage)
@@ -279,6 +252,17 @@ public class CreateCard : MonoBehaviour
     firstOption.text = newCard.getOption1();
     secondOption.text = newCard.getOption2();
     newCardScrollValue.value = 1;
+
+    var type = System.Type.GetType("TextManager");
+
+    // Debug.Log("TYPE MAYBE : " + UnityEngine.Object.FindObjectOfType(type));
+    if (newCard.UniqueBehavior){
+    //   // var customScript = newCard.ScriptName;
+    // a.AddComponent<type>();
+      
+    // dynamic v2 = newCard.GetType().GetProperty("ScriptName").GetValue(newCard, null);
+    a.AddComponent(System.Type.GetType(newCard.getUniqueScript()));
+    }
     // Debug.Log(newCard.getOtherCards());
 
     if (chosenCard.findLoot)
@@ -326,19 +310,11 @@ public class CreateCard : MonoBehaviour
         {
           newCardMaker = createNewCard("Card", cardsArray[0], distanceHor + 1200);
         }
-
-
       }
       bottomButton.interactable = false;
       topButton.enabled = false;
       // distanceHor += 450;
-
-
     });
-
-
-
-
     bottomButton.onClick.AddListener(() =>
     {
       // newCardText.text = newCard.getCardText();
@@ -351,7 +327,6 @@ public class CreateCard : MonoBehaviour
         // Debug.Log("POSITION HERE");
         // Debug.Log(a.transform.position);
         StartFight(CardPos, newCard.Enemy, newCard.Goodoutcome);
-
       }
       else
       {
@@ -385,31 +360,14 @@ public class CreateCard : MonoBehaviour
     newAngle.changeTarget(a);
     a.name = newCard.name;
 
-    // StoredPositions.Add(newTarget.transform.position);
-    // Debug.Log("BELOW IS NEW");
-    // Debug.Log(a.name);
-    // moveArrow(a.transform.position);
-
-
-
-
-
-    // Button btn2 = yourButton2.GetComponent<Button>();
-    // btn2.onClick.AddListener(mainGame.makeNewCard);
     return a;
   }
-
-  // Update is called once per frame
 
   public void StartFight(Vector3 givenPosition, EnemyCard enemyToFight, Card goodOutcome)
   {
     Debug.Log(enemyToFight);
     Debug.Log("FIGHT!");
-    // changeDir();
-    // Debug.Log(givenPosition);
-    // Debug.Log(givenPosition);
-    // Debug.Log(givenPosition);
-    // GameObject newFightCard = Instantiate(fightManager, parent, true);
+
     GameObject newFightCard = Instantiate(fightManager);
     newFightCard.transform.SetParent(parent);
     newFightCard.transform.position = CardPos;
@@ -417,22 +375,11 @@ public class CreateCard : MonoBehaviour
 
     newFightCard.name = enemyToFight.name;
     newAngle.changeTarget(newFightCard);
-    // newFightCard.transform.GetComponent("FightManager").setEnemyHP(200);
-    // Text newCardTitle = newFightCard.transform.GetChild(0).GetComponent<Text>();
 
-    // Text firstOption = newFightCard.transform.GetChild(3).GetChild(0).GetComponent<Text>();
-    // Debug.Log(newFightCard.getEnemyHP());
     newFightCard.GetComponent<FightManager>().Enemy = enemyToFight;
     newFightCard.GetComponent<FightManager>().goodOutcome = goodOutcome;
-
-    // Debug.Log();
     Debug.Log(enemyToFight.getEnemyHP());
     // Debug.Log(Card);
-    // newFightCard.
-    // newFightCard.transform.Translate(CardPos, Camera.main.transform);
-
-    // ItemCard newItemCard;
-
 
   }
 
@@ -442,10 +389,6 @@ public class CreateCard : MonoBehaviour
     Debug.Log("DIRECTION: " + dir + " LAST DIRECTION: " + lastDir);
     Debug.Log("CARD POSITION BEFORE CHANGE: " + CardPos);
 
-    // if (dir == 0)
-    // {
-    //   distanceHor += 450;
-    // }
     if ((dir == 1) & !(lastDir == 2))
     {
       Debug.Log("GOING UP");
@@ -468,10 +411,7 @@ public class CreateCard : MonoBehaviour
     lastDir = dir;
     Debug.Log("CARD POSITION AFTER CHANGE: " + CardPos);
 
-
-
     return CardPos;
-
 
   }
 
@@ -479,25 +419,16 @@ public class CreateCard : MonoBehaviour
   {
 
     //ONLY WORKS UP TO 50 CARDS RIGHT NOW BC THATS THE SET ARRAY SIZE. LATER CREATE NEW ARRAY WITH +1 size and copy items into it
-
     // StoredPositions = newTarget.transform.position.ToArray();
 
     Debug.Log("ADDING LINE POINT");
 
     lineRend = GetComponent<LineRenderer>();
-    // Debug.Log(numOfCards);
-    // lengthOfLineRenderer = numOfCards;
 
-    // // lineRend.positionCount = 2;
     points[0] = new Vector3(766, 360, 0.0f);
-    // for (int i = 0; i < numOfCards; i++)
-    //   {
-    // Debug.Log(numOfCards);
 
     points[numOfCards] = new Vector3(newTarget.x, newTarget.y, 3);
 
-    // }
-    // points.Push(CardPos);
     lineRend.positionCount = numOfCards + 1;
     numOfCards += 1;
 

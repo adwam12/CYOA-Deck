@@ -43,14 +43,7 @@ public class CardList : MonoBehaviour
           return ItemCards[checkedItem];
         }
       }
-      // Enumerable.Range(0, ItemCards.Length).OrderBy(c => random.Next()).ToArray();
-      // IEnumerable<int> numbers = Enumerable.Range(1, 10).Select(x => x * x);
-
       Debug.Log("RANDOM ARRYA: "  );
-      // for (checkedItem; checkedItem < ItemCards.Length; checkedItem++)
-      // {
-      //   itemcard = ItemCards[Random.Range(0, ItemCards.Length)];
-      // }
       itemcard = ItemCards[Random.Range(0, ItemCards.Length)];
 
       return itemcard;

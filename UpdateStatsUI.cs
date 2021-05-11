@@ -26,10 +26,5 @@ public class UpdateStatsUI : MonoBehaviour
       gameObject.transform.GetChild(3).GetComponent<Text>().text = "Chest: " + PlayerStatsScript.transform.GetComponent<EquipmentScript>().chest;
       gameObject.transform.GetChild(4).GetComponent<Text>().text = "Accessory: " + PlayerStatsScript.transform.GetComponent<EquipmentScript>().accessory;
       gameObject.transform.GetChild(5).GetComponent<Text>().text = "Weapon: " + PlayerStatsScript.transform.GetComponent<EquipmentScript>().weapon;
-
-
-
-
-
     }
 }

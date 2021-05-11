@@ -44,8 +44,6 @@ public class OpenInv : MonoBehaviour
         });
         OpenInvButton.onClick.AddListener(() =>
         {
-          // EquipPanel.SetActive(false);
-          // InvPanel.transform.SetAsLastSibling();
           if (isOpen){
             if (!(CurrentPanel == InvPanel)){
               InvPanel.transform.SetAsLastSibling();
@@ -64,15 +62,10 @@ public class OpenInv : MonoBehaviour
 
     public void openInv(){
       if (isOpen){
-        // MainUI.transform.position = new Vector3(MainUI.transform.position.x,MainUI.transform.position.y + 250,MainUI.transform.position.z);
-        // MainUI.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y + 250, Camera.transform.position.z);
-        // Debug.Log();
         tabText.GetComponent<Text>().text = "↑";
         
         isOpen = false;
       }else{
-        // MainUI.transform.position = new Vector3(MainUI.transform.position.x,MainUI.transform.position.y - 250,MainUI.transform.position.z);
-        // MainUI.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y - 250, Camera.transform.position.z);
         isOpen = true;
         tabText.GetComponent<Text>().text = "↓";
         
@@ -82,21 +75,14 @@ public class OpenInv : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      // MainUI.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y, Camera.transform.position.z);
+
      if (isOpen){
-        // MainUI.transform.position = new Vector3(MainUI.transform.position.x,MainUI.transform.position.y + 250,MainUI.transform.position.z);
         MainUI.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y - 230, MainUI.transform.position.z);
-        // OpenInvButton.transform.position = new Vector3(OpenInvButton.transform.position.x, Camera.transform.position.y, OpenInvButton.transform.position.z);
         gameObject.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y - 20, MainUI.transform.position.z);
-
-
         // isOpen = false;
       }else{
-        // MainUI.transform.position = new Vector3(MainUI.transform.position.x,MainUI.transform.position.y - 250,MainUI.transform.position.z);
         MainUI.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y - 590, MainUI.transform.position.z);
-        // OpenInvButton.transform.position = new Vector3(OpenInvButton.transform.position.x, Camera.transform.position.y - 350, OpenInvButton.transform.position.z);
         gameObject.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y - 380, Camera.transform.position.z);
-
         // isOpen = true;
       }
     }

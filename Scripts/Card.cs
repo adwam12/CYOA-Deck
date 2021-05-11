@@ -8,7 +8,8 @@ public class Card : ScriptableObject
     
 
     public bool findLoot;
-    public bool writeOnSpawn;
+    public bool UniqueBehavior;
+    public string ScriptName;
     public int lootToFind = 1;
     public Rarity itemRarity;
 
@@ -24,6 +25,9 @@ public class Card : ScriptableObject
 
     // [SerializeField] string cardTitle;
     [SerializeField] Color textColor;
+
+
+
 
     [SerializeField] public Card[] otherCards;
     
@@ -51,6 +55,11 @@ public class Card : ScriptableObject
     public string getCardText()
     {
       return gameText;
+    }
+
+    public string getUniqueScript()
+    {
+      return ScriptName;
     }
     
 

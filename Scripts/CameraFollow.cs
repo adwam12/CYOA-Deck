@@ -10,7 +10,6 @@ public class CameraFollow : MonoBehaviour
     public CreateCard Spawner;
     public GameObject StartingTarget;
 
-
     public Vector3 offset;
 
     private Vector3 desiredPosition;
