@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: FriendlyGoblin Attack
+  m_EditorClassIdentifier: 
+  findLoot: 0
+  gameText: The goblin did not like that. "Come into my home with your weapon drawn!
+    Even after being offered tea! You'll regret this!". The goblin runs behind his
+    bed and returns wearing an oversized helmet and a sword obviously meant for someone
+    twice his size, he is looking a little pathetic. "Nobody ambushes Grundar! En
+    garde!"
+  option1: En Garde!
+  option2: En Garde!
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards: []
+  randomizeFirst: 0
+  randomPickFirst: []
+  randomizeSecond: 0
+  randomPickSecond: []
+  FirstChoiceFight: 1
+  SecondChoiceFight: 1
+  Goodoutcome: {fileID: 11400000, guid: 3ba197a7f71b14086905dae9d5db5e3a, type: 2}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 11400000, guid: 050c6348d8e4a431a96e13df313e74e5, type: 2}

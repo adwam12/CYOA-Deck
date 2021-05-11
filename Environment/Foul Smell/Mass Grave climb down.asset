@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: Mass Grave climb down
+  m_EditorClassIdentifier: 
+  findLoot: 1
+  lootToFind: 1
+  itemRarity: 0
+  gameText: You slowly scale down the hole and immediatelly find something of use.
+    A massive pile of bodies stands before you. To your right is a small hole leading
+    into the darkness. You spot a small pouch of gold on the other side of the trench.
+    You think you see a body moving ahead.
+  option1: Traverse the pile of bodies towards the gold.
+  option2: Climb out and leave.
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards: []
+  randomizeFirst: 1
+  randomPickFirst:
+  - {fileID: 11400000, guid: 50a4940a2245c469c966fde9a9db76c7, type: 2}
+  - {fileID: 11400000, guid: e0d00a287c276474583280cf9a43a058, type: 2}
+  randomizeSecond: 0
+  randomPickSecond: []
+  FirstChoiceFight: 0
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 0}

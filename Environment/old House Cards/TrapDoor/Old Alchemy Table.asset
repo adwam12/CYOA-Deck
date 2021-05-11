@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: Old Alchemy Table
+  m_EditorClassIdentifier: 
+  gameText: You go down the trap door and find a dark room, looks like an old alchemy
+    lab. A wooden table caked in dust and broken flasks sits across from you, displaying
+    an unlabbeled vial. Nobody has been here in years.
+  option1: Grab the vial.
+  option2: Best not to touch things and leave.
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards: []
+  randomizeFirst: 1
+  randomPickFirst:
+  - {fileID: 11400000, guid: 4d701d11386784170ba97b2a03796bf0, type: 2}
+  - {fileID: 11400000, guid: 4989364a2b4d6426b856cd9a8440cf50, type: 2}
+  randomizeSecond: 0
+  randomPickSecond: []

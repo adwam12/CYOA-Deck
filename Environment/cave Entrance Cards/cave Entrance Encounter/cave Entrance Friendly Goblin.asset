@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: cave Entrance Friendly Goblin
+  m_EditorClassIdentifier: 
+  findLoot: 0
+  gameText: You walk into a small room dug into the cave. A small goblin spots you
+    and jumps out of bed. "Hello Stranger! I don't get very many visitors around
+    here! Please sit! have some tea with me!
+  option1: Sit with the goblin
+  option2: Pull out your sword
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards:
+  - {fileID: 11400000, guid: 4702b2ba3b9c74613934111733f94f7e, type: 2}
+  - {fileID: 11400000, guid: fadced6a90c1740ac910804e9c64c85c, type: 2}
+  randomizeFirst: 0
+  randomPickFirst: []
+  randomizeSecond: 0
+  randomPickSecond: []

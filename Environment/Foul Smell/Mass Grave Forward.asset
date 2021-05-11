@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: Mass Grave Forward
+  m_EditorClassIdentifier: 
+  findLoot: 0
+  lootToFind: 1
+  itemRarity: 0
+  gameText: 'You climb the bodies towards the gold when something brushes against
+    your leg. Rats emerge from every crevice and body. '
+  option1: RUN!
+  option2: Fight!
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards:
+  - {fileID: 11400000, guid: 0436f0427330846cb8bf887e0b704a49, type: 2}
+  randomizeFirst: 0
+  randomPickFirst: []
+  randomizeSecond: 0
+  randomPickSecond: []
+  FirstChoiceFight: 0
+  SecondChoiceFight: 1
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 11400000, guid: 86e21c08a65cb477094bfa6fc2bd59f9, type: 2}

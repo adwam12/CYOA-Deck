@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: cave Entrance Shout
+  m_EditorClassIdentifier: 
+  gameText: You shout a faint "Hello?" and hear grunting coming from within. The
+    sounds are neither human nor beast.
+  option1: Ready weapon and venture forth
+  option2: Approach in a non threatning manner.
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards:
+  - {fileID: 11400000, guid: 4ff719d2bf07747b9aa07034a699a2c6, type: 2}
+  - {fileID: 0}
+  randomizeFirst: 0
+  randomPickFirst: []
+  randomizeSecond: 1
+  randomPickSecond:
+  - {fileID: 11400000, guid: b55bec97f85bf4301937ea2ac62b03ea, type: 2}
+  - {fileID: 11400000, guid: ed3e6e39a9d654c18bc0ec4434a5e4a1, type: 2}

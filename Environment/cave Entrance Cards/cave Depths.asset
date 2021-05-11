@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: cave Depths
+  m_EditorClassIdentifier: 
+  gameText: As you delve deeper, you hear faint snoring. Man or beast? You see torches
+    on the cave wall.
+  option1: Light the Torches
+  option2: Try to sneak forward
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards: []
+  randomizeFirst: 1
+  randomPickFirst:
+  - {fileID: 11400000, guid: ed3e6e39a9d654c18bc0ec4434a5e4a1, type: 2}
+  - {fileID: 11400000, guid: bee7b13382a774b27a0adf231514f12f, type: 2}
+  randomizeSecond: 1
+  randomPickSecond:
+  - {fileID: 11400000, guid: b55bec97f85bf4301937ea2ac62b03ea, type: 2}
+  - {fileID: 11400000, guid: ed3e6e39a9d654c18bc0ec4434a5e4a1, type: 2}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: cave Entrance dragon Lair Seen
+  m_EditorClassIdentifier: 
+  findLoot: 0
+  gameText: You encounter a giant dragon! The dragon has no problem spotting you
+    with the torches lit.
+  option1: Prepare for a fight!
+  option2: Attempt to talk to the dragon.
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards: []
+  randomizeFirst: 0
+  randomPickFirst: []
+  randomizeSecond: 0
+  randomPickSecond: []
+  FirstChoiceFight: 1
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 11400000, guid: 71bd1f87195044d239961ee62c3089fd, type: 2}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 11400000, guid: 94f22c17878c04d0295f6cd190eb800f, type: 2}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: GoblinGameLost
+  m_EditorClassIdentifier: 
+  findLoot: 0
+  gameText: You and Grundar both grab a cup and drink in one swift gulp. You wait
+    a couple seconds as the goblin stares you down. Everything goes black. You must
+    have lost.
+  option1: uh oh...
+  option2: uh oh...
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards:
+  - {fileID: 11400000, guid: 9fc2298633ef94d5f99088a67fac9a73, type: 2}
+  - {fileID: 11400000, guid: 9fc2298633ef94d5f99088a67fac9a73, type: 2}
+  randomizeFirst: 0
+  randomPickFirst: []
+  randomizeSecond: 0
+  randomPickSecond: []

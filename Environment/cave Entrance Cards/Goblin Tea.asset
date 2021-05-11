@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: Goblin Tea
+  m_EditorClassIdentifier: 
+  findLoot: 0
+  gameText: You sit as the goblin pours two cups of tea. It looks like swamp water
+    and smells like it. "I'm Grundar the great and I don't much care for you name.
+    Care for a game?"
+  option1: Agree to play
+  option2: Refuse
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards:
+  - {fileID: 11400000, guid: 47d30870127434e06a967c350cdd6b7a, type: 2}
+  - {fileID: 11400000, guid: 9f7e057e358a34aacb962d7b7a1971f9, type: 2}
+  randomizeFirst: 0
+  randomPickFirst: []
+  randomizeSecond: 0
+  randomPickSecond: []

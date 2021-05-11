@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: cave EntranceDragonDead
+  m_EditorClassIdentifier: 
+  findLoot: 1
+  lootToFind: 3
+  itemRarity: 4
+  gameText: 'Out of breath, you stand over the massive body of the dead dragon. A
+    gruelling battle but you know it was worth it as you stare at the mounds of gold. '
+  option1: Gather all the gold I can carry
+  option2: Search for items of note.
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards: []
+  randomizeFirst: 0
+  randomPickFirst: []
+  randomizeSecond: 0
+  randomPickSecond: []
+  FirstChoiceFight: 0
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 0}

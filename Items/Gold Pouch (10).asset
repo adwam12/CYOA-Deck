@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4512fec470bcc47e8b17c0fb10fb273e, type: 3}
+  m_Name: Gold Pouch (10)
+  m_EditorClassIdentifier: 
+  ItemDescription: You find a gold pouch containing 10 coins.
+  option1: 
+  usable: 0
+  healthUp: 0
+  itemRarity: 4
+  IncreaseHealthBy: 0
+  staminaUp: 0
+  IncreaseStaminaBy: 0
+  maxHealthUp: 0
+  IncreaseMaxHealthBy: 0
+  newimage: {fileID: 21300000, guid: 296b9013499d247f2aeb27bcb4f53c45, type: 3}
+  equipable: 0
+  itemType: 0
+  MaxHealthBonus: 0
+  MaxStaminaBonus: 0
+  AttackBonus: 0

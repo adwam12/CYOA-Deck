@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: Mass grave Hole
+  m_EditorClassIdentifier: 
+  findLoot: 0
+  lootToFind: 1
+  itemRarity: 0
+  gameText: You run inside the hole and realize most of the rats stop following you
+    immediatelly. Complete darkness surrounds you. There is no turning back now.
+  option1: Walk forward
+  option2: Walk forward
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards:
+  - {fileID: 11400000, guid: f81a4cbaee9ac4cc8ac2654964db13a6, type: 2}
+  - {fileID: 11400000, guid: f81a4cbaee9ac4cc8ac2654964db13a6, type: 2}
+  randomizeFirst: 0
+  randomPickFirst: []
+  randomizeSecond: 0
+  randomPickSecond: []
+  FirstChoiceFight: 0
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 0}

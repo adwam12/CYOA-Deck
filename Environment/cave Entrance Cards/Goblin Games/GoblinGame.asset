@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
+  m_Name: GoblinGame
+  m_EditorClassIdentifier: 
+  findLoot: 0
+  gameText: You nod in response and Grundar pulls two clear marbles out of a jar
+    and drops one in your cup of tea, the other in his. They immediatelly bubble
+    up and dissolve. "One of those you don't wanna drink, the other you do. Neither
+    of us know which is which. Pick a cup and drink!"
+  option1: Ask what happens if you lose.
+  option2: Pick a random cup.
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  otherCards:
+  - {fileID: 11400000, guid: e5a31eddb74c444a79116715267c31dc, type: 2}
+  randomizeFirst: 0
+  randomPickFirst: []
+  randomizeSecond: 1
+  randomPickSecond:
+  - {fileID: 11400000, guid: da7d169fa1e714947848361976c14098, type: 2}
+  - {fileID: 11400000, guid: cd112311eaffc46828f9e995d58a2ea4, type: 2}
