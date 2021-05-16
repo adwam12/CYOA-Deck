@@ -90,4 +90,8 @@ public class MainGame : MonoBehaviour
     public void testdebug(){
       Debug.Log("Test Debug");
     }
+
+    public void populateItem(){
+      Debug.Log("NUMBER: " + GameManager.chosenItemsCards.Count);
+    }
 }

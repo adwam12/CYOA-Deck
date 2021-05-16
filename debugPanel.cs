@@ -20,7 +20,7 @@ public class debugPanel : MonoBehaviour
     {
       RestartButton.onClick.AddListener(()=>{
         Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name) ;
+        SceneManager.LoadScene(0) ;
       });
       ItemButton.onClick.AddListener(()=>{
         GameObject newItemCard = CardSpawner.createItemCard("common", Canvas.transform.GetChild(Canvas.transform.childCount - 1).position);

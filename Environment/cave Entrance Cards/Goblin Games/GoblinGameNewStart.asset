@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: GoblinGameNewStart
   m_EditorClassIdentifier: 
   findLoot: 0
-  gameText: You wake up hours later in a mossy forrest. It's the middle of the night.
+  UniqueBehavior: 1
+  ScriptName: ClearInventory
+  lootToFind: 1
+  itemRarity: 0
+  gameText: You wake up hours later in a mossy forest. It's the middle of the night.
     You look down and arn't suprised to find all your belongings gone, save for your
     now empty backpack. At least you're alive.
   option1: Look around, try to get your bearings.
@@ -24,3 +28,8 @@ MonoBehaviour:
   randomPickFirst: []
   randomizeSecond: 0
   randomPickSecond: []
+  FirstChoiceFight: 0
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 0}

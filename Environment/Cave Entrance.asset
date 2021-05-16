@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Cave Entrance
   m_EditorClassIdentifier: 
   findLoot: 0
+  UniqueBehavior: 0
+  ScriptName: 
   lootToFind: 0
   itemRarity: 4
   gameText: You find the mouth of a cave. You hear snores coming from within

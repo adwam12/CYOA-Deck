@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class CameraFollow : MonoBehaviour
 {
@@ -17,11 +19,24 @@ public class CameraFollow : MonoBehaviour
 
     // public GameObject EndTarget;
 
-    private void Start() {
-      changeTarget(StartingTarget);
-    }
+
+     void Start()
+     {
+         StartCoroutine(LateStart(0.5f));
+     }
+ 
+     IEnumerator LateStart(float waitTime)
+     {
+       
+         yield return new WaitForSeconds(waitTime);
+         //Your Function You Want to Call
+         changeTarget(StartingTarget);
+     }
     void LateUpdate() {
-      newTarget(target);
+      if (Spawner){
+        newTarget(target);
+      }
+
     }
 
     public void newTarget(Transform trans){
@@ -46,7 +61,10 @@ public class CameraFollow : MonoBehaviour
       target = targetedObject.transform;
       // EndTarget = targetedObject;
       Debug.Log(target.position);
-      Spawner.moveArrow(target.position);
+      if (Spawner){
+        Spawner.moveArrow(target.position);
+      }
+
       
       // Vector3 desiredPosition = trans.position + offset;
       // Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);

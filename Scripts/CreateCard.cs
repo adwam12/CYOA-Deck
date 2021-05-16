@@ -40,7 +40,7 @@ public class CreateCard : MonoBehaviour
   private Vector3[] StoredPositions;
 
 
-  private Vector3[] points;
+  public Vector3[] points;
 
   // public ItemCard itemCards;
   [SerializeField] CardList itemCards;
@@ -73,6 +73,8 @@ public class CreateCard : MonoBehaviour
 
 
     newItemCard = itemCards.getItemCard(Rarity);
+
+    
 
     Text newCardText = a.transform.GetChild(1).GetChild(0).GetChild(1).GetComponent<Text>();
     Scrollbar newCardScrollValue = a.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Scrollbar>();
@@ -421,6 +423,7 @@ public class CreateCard : MonoBehaviour
     //ONLY WORKS UP TO 50 CARDS RIGHT NOW BC THATS THE SET ARRAY SIZE. LATER CREATE NEW ARRAY WITH +1 size and copy items into it
     // StoredPositions = newTarget.transform.position.ToArray();
 
+    // Debug.Log("ADDING LINE POINT");
     Debug.Log("ADDING LINE POINT");
 
     lineRend = GetComponent<LineRenderer>();

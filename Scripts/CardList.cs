@@ -13,6 +13,12 @@ public class CardList : MonoBehaviour
     Card card;
     ItemCard itemcard;
 
+    private void Start() {
+      ItemCards = GameManager.chosenItemsCards.ToArray();
+      EnvironmentCards = GameManager.chosenEnvCards.ToArray();
+
+    }
+
     public Card getEnvCard()
     {
       // return EnvironmentCards;
