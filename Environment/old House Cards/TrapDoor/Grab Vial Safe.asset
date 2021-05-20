@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
   m_Name: Grab Vial Safe
   m_EditorClassIdentifier: 
+  unlocked: 1
+  EnvChild: []
+  findLoot: 0
+  UniqueBehavior: 0
+  ScriptName: 
+  lootToFind: 1
+  itemRarity: 0
   gameText: You grab the mysterious potion an put it in your bag. Nothing left here
     for you.
   option1: Let's leave
@@ -22,3 +29,8 @@ MonoBehaviour:
   randomPickFirst: []
   randomizeSecond: 0
   randomPickSecond: []
+  FirstChoiceFight: 0
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 0}

@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
   m_Name: Friendly Goblin aggresive approach
   m_EditorClassIdentifier: 
+  unlocked: 1
+  EnvChild: []
   findLoot: 0
+  UniqueBehavior: 0
+  ScriptName: 
+  lootToFind: 1
+  itemRarity: 0
   gameText: You walk into a small room dug into the cave with your sword at the ready.
     A small goblin sitting on his bed spots you. He screams and jumps out of bed.
     "Come into my home with your weapon drawn! You'll regret this!". The goblin runs

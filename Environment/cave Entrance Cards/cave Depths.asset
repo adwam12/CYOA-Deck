@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
   m_Name: cave Depths
   m_EditorClassIdentifier: 
+  unlocked: 0
+  EnvChild: []
+  findLoot: 0
+  UniqueBehavior: 0
+  ScriptName: 
+  lootToFind: 1
+  itemRarity: 0
   gameText: As you delve deeper, you hear faint snoring. Man or beast? You see torches
     on the cave wall.
   option1: Light the Torches
@@ -26,3 +33,8 @@ MonoBehaviour:
   randomPickSecond:
   - {fileID: 11400000, guid: b55bec97f85bf4301937ea2ac62b03ea, type: 2}
   - {fileID: 11400000, guid: ed3e6e39a9d654c18bc0ec4434a5e4a1, type: 2}
+  FirstChoiceFight: 0
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 0}

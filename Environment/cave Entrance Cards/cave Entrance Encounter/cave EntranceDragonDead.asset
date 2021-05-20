@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
   m_Name: cave EntranceDragonDead
   m_EditorClassIdentifier: 
+  unlocked: 1
+  EnvChild: []
   findLoot: 1
+  UniqueBehavior: 0
+  ScriptName: 
   lootToFind: 3
   itemRarity: 4
   gameText: 'Out of breath, you stand over the massive body of the dead dragon. A

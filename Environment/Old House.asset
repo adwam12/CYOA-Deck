@@ -12,6 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
   m_Name: Old House
   m_EditorClassIdentifier: 
+  unlocked: 1
+  EnvChild:
+  - {fileID: 11400000, guid: e676878fc474e41a894dff3955aff956, type: 2}
+  - {fileID: 11400000, guid: 1796a68fe242a4dcf8b00b0e3cd52035, type: 2}
+  - {fileID: 11400000, guid: 67d269a3fdc884ddb8b4e00a5b4b03eb, type: 2}
+  findLoot: 0
+  UniqueBehavior: 0
+  ScriptName: 
+  lootToFind: 1
+  itemRarity: 0
   gameText: You find a decrepid old house
   option1: Enter
   option2: Walk past
@@ -25,3 +35,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1796a68fe242a4dcf8b00b0e3cd52035, type: 2}
   randomizeSecond: 0
   randomPickSecond: []
+  FirstChoiceFight: 0
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 0}

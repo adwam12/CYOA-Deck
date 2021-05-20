@@ -190,7 +190,7 @@ public class CreateCard : MonoBehaviour
       foreach (char character in text.ToCharArray())
       {
         destination.text += character;
-        Debug.Log("TEXT HERE:");
+        // Debug.Log("TEXT HERE:");
         yield return new WaitForSeconds(0.02f);
       }
     }
@@ -306,10 +306,13 @@ public class CreateCard : MonoBehaviour
           Card FirstRando = chosenCard.getRandomCard(0);
           newCardMaker = createNewCard("Card", FirstRando, distanceHor + 1200);
 
-          Debug.Log(FirstRando);
+          // Debug.Log(FirstRando);
         }
         else
         {
+          Debug.Log("NOT RANDOMIZING");
+          Debug.Log("CURRENTLY ON: " + chosenCard.name);
+
           newCardMaker = createNewCard("Card", cardsArray[0], distanceHor + 1200);
         }
       }
@@ -427,6 +430,14 @@ public class CreateCard : MonoBehaviour
     Debug.Log("ADDING LINE POINT");
 
     lineRend = GetComponent<LineRenderer>();
+
+    if (points.Length < 1)
+    {
+        lengthOfLineRenderer = 50;
+        points = new Vector3[lengthOfLineRenderer];
+        numOfCards = 1;
+    }
+    // Debug.Log("POINTS:  " + points[0]);
 
     points[0] = new Vector3(766, 360, 0.0f);
 

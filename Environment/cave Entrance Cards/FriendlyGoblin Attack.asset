@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
   m_Name: FriendlyGoblin Attack
   m_EditorClassIdentifier: 
+  unlocked: 1
+  EnvChild: []
   findLoot: 0
+  UniqueBehavior: 0
+  ScriptName: 
+  lootToFind: 1
+  itemRarity: 0
   gameText: The goblin did not like that. "Come into my home with your weapon drawn!
     Even after being offered tea! You'll regret this!". The goblin runs behind his
     bed and returns wearing an oversized helmet and a sword obviously meant for someone

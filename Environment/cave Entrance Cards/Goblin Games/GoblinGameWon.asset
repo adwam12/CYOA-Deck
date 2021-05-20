@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
   m_Name: GoblinGameWon
   m_EditorClassIdentifier: 
+  unlocked: 1
+  EnvChild: []
   findLoot: 0
+  UniqueBehavior: 0
+  ScriptName: 
+  lootToFind: 1
+  itemRarity: 0
   gameText: 'You and Grundar both grab a cup and drink in one swift gulp. You wait
     a couple seconds for any effects when Grundar''s head falls to the table. You
     won! '
@@ -25,3 +31,8 @@ MonoBehaviour:
   randomPickFirst: []
   randomizeSecond: 0
   randomPickSecond: []
+  FirstChoiceFight: 0
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 0}

@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
   m_Name: old House Cellar
   m_EditorClassIdentifier: 
+  unlocked: 1
+  EnvChild: []
   findLoot: 0
+  UniqueBehavior: 0
+  ScriptName: 
+  lootToFind: 1
+  itemRarity: 0
   gameText: The house seems empty, but upon closer inspection, you find a trap door
     underneath the rug.
   option1: Go down the trap door
@@ -25,3 +31,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 67d269a3fdc884ddb8b4e00a5b4b03eb, type: 2}
   randomizeSecond: 0
   randomPickSecond: []
+  FirstChoiceFight: 0
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 0}

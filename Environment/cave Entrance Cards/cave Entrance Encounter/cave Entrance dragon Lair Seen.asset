@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
   m_Name: cave Entrance dragon Lair Seen
   m_EditorClassIdentifier: 
+  unlocked: 1
+  EnvChild: []
   findLoot: 0
+  UniqueBehavior: 0
+  ScriptName: 
+  lootToFind: 1
+  itemRarity: 0
   gameText: You encounter a giant dragon! The dragon has no problem spotting you
     with the torches lit.
   option1: Prepare for a fight!

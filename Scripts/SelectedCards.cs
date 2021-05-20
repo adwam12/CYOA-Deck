@@ -14,6 +14,9 @@ public class SelectedCards : MonoBehaviour, IPointerClickHandler
 [SerializeField] public UnityEvent onClick;
 [SerializeField] public ItemCard item;
 [SerializeField] public Card EnvCard;
+// [SerializeField] public Card[] EnvCardChild;
+[SerializeField] public bool isChild;
+
 
 [SerializeField] public GameObject Deck;
 [SerializeField] private bool inDeck;
@@ -24,7 +27,10 @@ public class SelectedCards : MonoBehaviour, IPointerClickHandler
 
 
 // [SerializeField] private bool Selected;
-
+  // private void Start() {
+  //   if (!(isChild)){
+  //   }
+  // }
 	private void Update()
 	{
 		// If left mouse button pressed
@@ -32,6 +38,17 @@ public class SelectedCards : MonoBehaviour, IPointerClickHandler
 		// {
 		// 	OnMouseClick.Invoke();
 		// }
+    if (isChild){
+      if (!(EnvCard.unlocked)){
+          gameObject.GetComponent<Image>().color = new Color(defaultColor.r - (defaultColor.r/2.5f), defaultColor.g -(defaultColor.g/2.5f), defaultColor.b -(defaultColor.b/2.5f));
+        }else{
+          gameObject.GetComponent<Image>().color = defaultColor;
+        }
+
+    }else{
+      
+
+ 
     if (inDeck){
       // Debug.Log(gameObject.GetComponent<Image>().color);
       gameObject.GetComponent<Image>().color = defaultColor;
@@ -44,6 +61,7 @@ public class SelectedCards : MonoBehaviour, IPointerClickHandler
       gameObject.GetComponent<Image>().color = new Color(defaultColor.r - (defaultColor.r/2.5f), defaultColor.g -(defaultColor.g/2.5f), defaultColor.b -(defaultColor.b/2.5f));
 
       // Debug.Log(defaultColor.r);
+    }
     }
 	}
 
@@ -65,7 +83,7 @@ public class SelectedCards : MonoBehaviour, IPointerClickHandler
         public void OnPointerClick(PointerEventData pointerEventData)
     {
         //Output to console the clicked GameObject's name and the following message. You can replace this with your own actions for when clicking the GameObject.
-        Debug.Log(name + " Game Object Clicked!", this);
+        // Debug.Log(name + " Game Object Clicked!", this);
         if (item)
         {
           if (Deck.GetComponent<CardDeck>().addItemToDeck(item)){
@@ -75,16 +93,67 @@ public class SelectedCards : MonoBehaviour, IPointerClickHandler
           }
 
         }else{
-          if (Deck.GetComponent<CardDeck>().addCardToDeck(EnvCard)){
-            inDeck = true;
+          if (isChild){
+            if (EnvCard.unlocked){
+              EnvCard.unlocked = false;
+            }else{
+              EnvCard.unlocked = true;
+            }
+            
           }else{
-            inDeck = false;  
+
+
+            if (Deck.GetComponent<CardDeck>().addCardToDeck(EnvCard)){
+              inDeck = true;
+              Debug.Log(gameObject.transform.parent.transform.GetChild(0).GetComponent<HorizontalLayoutGroup>().padding.left); 
+              if (gameObject.transform.parent.transform.GetChild(0).GetComponent<HorizontalLayoutGroup>().spacing < 50){
+                  // gameObject.transform.parent.transform.GetChild(1).GetComponent<HorizontalLayoutGroup>().spacing += 0.50f;
+                  StartCoroutine(deploy(0.0001f));
+
+              }
+            }else{
+              inDeck = false;  
+              gameObject.transform.parent.transform.GetChild(0).GetComponent<HorizontalLayoutGroup>().spacing = -300;
+              gameObject.transform.parent.transform.GetChild(0).GetComponent<HorizontalLayoutGroup>().padding.left = 0;
+              //DISABLE ALL CHILD UPGRADES
+              // EnvCard.EnvChild
+              for (var i = 0; i < EnvCard.EnvChild.Length; i++){
+                EnvCard.EnvChild[i].unlocked = false;
+              }
+
+            }
           }
+
 
         }
 
         // invoke your event
         onClick.Invoke();
     }
+
+
+
+         
+
+ 
+     IEnumerator deploy(float waitTime)
+     {
+       
+         yield return new WaitForSeconds(waitTime);
+      while((gameObject.transform.parent.transform.GetChild(0).GetComponent<HorizontalLayoutGroup>().spacing < 25) || ( gameObject.transform.parent.transform.GetChild(0).GetComponent<HorizontalLayoutGroup>().padding.left < 370))
+      {
+        if (gameObject.transform.parent.transform.GetChild(0).GetComponent<HorizontalLayoutGroup>().padding.left < 370){
+          gameObject.transform.parent.transform.GetChild(0).GetComponent<HorizontalLayoutGroup>().padding.left = 370;
+        }
+        if (gameObject.transform.parent.transform.GetChild(0).GetComponent<HorizontalLayoutGroup>().spacing < 25){
+         gameObject.transform.parent.transform.GetChild(0).GetComponent<HorizontalLayoutGroup>().spacing += 10.50f;
+        }
+        yield return new WaitForSeconds(0.005f);
+      }
+
+        
+
+     }
+
 
 }

@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fba8bdddc194686bc9d15867cb313e, type: 3}
   m_Name: Old Alchemy Table
   m_EditorClassIdentifier: 
+  unlocked: 0
+  EnvChild: []
+  findLoot: 0
+  UniqueBehavior: 0
+  ScriptName: 
+  lootToFind: 1
+  itemRarity: 0
   gameText: You go down the trap door and find a dark room, looks like an old alchemy
     lab. A wooden table caked in dust and broken flasks sits across from you, displaying
     an unlabbeled vial. Nobody has been here in years.
@@ -25,3 +32,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4989364a2b4d6426b856cd9a8440cf50, type: 2}
   randomizeSecond: 0
   randomPickSecond: []
+  FirstChoiceFight: 0
+  SecondChoiceFight: 0
+  Goodoutcome: {fileID: 0}
+  Badoutcome: {fileID: 0}
+  Enemy: {fileID: 0}

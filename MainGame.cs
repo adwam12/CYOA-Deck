@@ -82,7 +82,7 @@ public class MainGame : MonoBehaviour
 
     public void makeNewCard()
     {
-      GameObject newCard = Spawner.createNewCard("EMPTY", card, distanceHor + 1200);
+      GameObject newCard = Spawner.createNewCard("Card", EnvCards.getEnvCard(), distanceHor + 1200);
       Debug.Log("newCard.transform.position");
 
       distanceHor += 450;
